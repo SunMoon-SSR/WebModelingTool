@@ -4,5 +4,5 @@
 
 # How to Use
 
-* Compile the source code by using C# based environment such as Visual Studio
+* Compile the source code by using C# based environment such as Visual Studio (We recommand Visual Studio 2017)
 * Run the compiled program image
