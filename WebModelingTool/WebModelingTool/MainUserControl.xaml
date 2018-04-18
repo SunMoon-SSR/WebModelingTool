@@ -1,0 +1,767 @@
+﻿<UserControl x:Class="WebModelingTool.MainUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WebModelingTool"
+              mc:Ignorable="d" 
+              d:DesignHeight="900" d:DesignWidth="1500" TabIndex="0">
+    <UserControl.Resources>
+        <Style x:Key="IButton" TargetType="{x:Type RadioButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image Margin="2" Source="Image\IButton.png" Stretch="Uniform"/>
+                            <Border x:Name="border" BorderBrush="Red" BorderThickness="1" CornerRadius="5" Visibility="Hidden"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ITextBox" TargetType="{x:Type RadioButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image Source="Image\ITextBox.png" Stretch="Uniform" Margin="2"/>
+                            <Border x:Name="border" BorderBrush="Red" BorderThickness="1" CornerRadius="5" Visibility="Hidden"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="IRadioButton" TargetType="{x:Type RadioButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image Margin="2" Source="Image\IRadioButton.png" Stretch="Uniform"/>
+                            <Border x:Name="border" BorderBrush="Red" BorderThickness="1" CornerRadius="5" Visibility="Hidden"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="IImage.png" TargetType="{x:Type RadioButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image Margin="2" Source="Image\IImage.png" Stretch="Uniform"/>
+                            <Border x:Name="border" BorderBrush="Red" BorderThickness="1" CornerRadius="5" Visibility="Hidden"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="note32RadioButton" TargetType="{x:Type RadioButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <!--<Image Margin="2" Source="Image\note32.png" Stretch="Uniform"/>-->
+                            <Border x:Name="border" BorderBrush="Red" BorderThickness="1" CornerRadius="5" Visibility="Hidden"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DotCheckBox" TargetType="{x:Type CheckBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image Margin="0,0,5,0" Source="Image\dot.png" Stretch="Uniform"/>
+                            <Border x:Name="border" BorderBrush="Red" BorderThickness="1" CornerRadius="5" Visibility="Hidden" Margin="4,10,9,10"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DrawCheckBox" TargetType="{x:Type CheckBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image1">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image x:Name="image" Margin="0" Source="Image\DrawOff.png" Stretch="Uniform" Visibility="Hidden"/>
+                            <Image x:Name="image1" Margin="0" Source="Image\DrawOn.png" Stretch="Uniform" Height="Auto" Width="Auto"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="HarmonyCheckBox" TargetType="{x:Type CheckBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border1">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image Source="Image\Harmony.png" Stretch="Uniform" Margin="2"/>
+                            <Border x:Name="border1" BorderBrush="Black" BorderThickness="1" Margin="5,0" CornerRadius="5" Visibility="Hidden"/>
+                            <Border x:Name="border" BorderThickness="1" Margin="5,0" BorderBrush="Red" CornerRadius="5" Visibility="Hidden"/>
+
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="TieCheckBox" TargetType="{x:Type CheckBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border1">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image Margin="2,0" Source="Image\Tie.png" Stretch="Uniform"/>
+                            <Border x:Name="border1" BorderBrush="Black" BorderThickness="1" Margin="2,0" CornerRadius="5" Visibility="Hidden"/>
+                            <Border x:Name="border" BorderThickness="1" Margin="2,0" BorderBrush="Red" CornerRadius="5" Visibility="Hidden"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="SlurCheckBox" TargetType="{x:Type CheckBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border1">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image Source="Image\Slur .png" Stretch="Uniform" Margin="2,0"/>
+                            <Border x:Name="border1" BorderBrush="Black" BorderThickness="1" Margin="2,0" CornerRadius="5" Visibility="Hidden"/>
+                            <Border x:Name="border" BorderThickness="1" Margin="2,0" BorderBrush="Red" CornerRadius="5" Visibility="Hidden"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="PlayCheckBox" TargetType="{x:Type CheckBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image1">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image x:Name="image1" Margin="0" Source="Image\Play.png" Stretch="Uniform"/>
+                            <Image x:Name="image" Margin="0" Source="Image\Pause.png" Stretch="Uniform" Visibility="Hidden"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="StopButton" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image1">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image x:Name="image1" Margin="0" Source="Image\Stop.png" Stretch="Uniform"/>
+                            <Image x:Name="image" Margin="0" Source="Image\Stop2.png" Stretch="Uniform" Visibility="Hidden"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ModifyModeCheckBox" TargetType="{x:Type CheckBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked"/>
+                                    <VisualState x:Name="Indeterminate"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image Height="52" Margin="5" Source="Image/ModifyMode.png" Stretch="Uniform" VerticalAlignment="Bottom"/>
+                            <Border x:Name="border" BorderBrush="Red" BorderThickness="1" CornerRadius="5" Visibility="Hidden" Margin="2"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <DockPanel Background="White">
+        <Menu DockPanel.Dock="Top" Height="22">
+            <MenuItem Header="파일(F)">
+                <MenuItem  Header="새 프로젝트"/>
+                <MenuItem   Header="HTML파일 열기"/>
+                <MenuItem   Header="UI파일 열기"/>
+                <MenuItem  Header="설정"/>
+                <Separator/>
+                <MenuItem Name="SaveAs" Header="다른 이름으로 저장"/>
+                <Separator/>
+                <MenuItem Name="MusicalScoreSave"   Header="파일 저장"/>
+                <MenuItem Name="MusicalScorePrint" Header="HTML화 저장"/>
+            </MenuItem>
+            <MenuItem Header="파일(F)">
+            </MenuItem>
+            <MenuItem Header="편집(E)">
+            </MenuItem>
+            <MenuItem Header="보기(V)">
+            </MenuItem>
+            <MenuItem Header="프로젝트(P)">
+            </MenuItem>
+            <MenuItem Header="디버그(D)">
+            </MenuItem>
+            <MenuItem Header="도구(T)">
+            </MenuItem>
+            <MenuItem Header="도움말(H)">
+            </MenuItem>
+        </Menu>
+        <Menu DockPanel.Dock="Top" Height="125" Margin="0,0,0,0">
+            <Menu.BorderBrush>
+                <ImageBrush/>
+            </Menu.BorderBrush>
+            <!-- <Menu.Background>
+                <ImageBrush ImageSource="Image\Menu5.png"/>
+            </Menu.Background> -->
+            <ScrollViewer Width="1400"  Margin="0,0,0,0" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                <Grid x:Name="MenuGrid" Margin="0,0,0,0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0" />
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="1" />
+                        <ColumnDefinition Width="800"/>
+                        <ColumnDefinition Width="0"/>
+                        <ColumnDefinition Width="200" x:Name="PlayGropColumn"/>
+                        <ColumnDefinition Width="0"/>
+                        <ColumnDefinition Width="180" />
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <GroupBox Grid.Column="1" Grid.Row="1" Content="새 프로젝트"/>
+
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="18"/>
+                            <RowDefinition />
+                            <RowDefinition Height="5"/>
+                            <RowDefinition />
+                            <RowDefinition Height="5"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="5"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="5"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Name="NewProjectButton"  Click="NewProjectButton_Click" Grid.Column="1" Grid.Row="1">
+                            <Image Source="Image\New.png" />
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                        <Button Name="ImageOpenButton" Click="ImageOpenButton_Click" Grid.Column="1" Grid.Row="3">
+                            <Image Source="Image\DrawIcon.png" Stretch="Fill" Margin="2,0"/>
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                        <Button Name="HtmlOpenButton" Click="HtmlOpenButton_Click" Grid.Column="3" Grid.Row="1">
+                            <!--<Image Source="Image\midi-icon.png"/>-->
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </Grid>
+
+                    <GroupBox Grid.Column="3" Grid.Row="1" Content="편집"/>
+                    <Grid Grid.Column="3" Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5"/>
+                            <ColumnDefinition Width="400"/>
+                            <ColumnDefinition Width="5"/>
+                            <ColumnDefinition Width="270*" />
+                            <ColumnDefinition Width="5"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="18"/>
+                                <RowDefinition Height="77*" />
+                                <RowDefinition Height="5"/>
+                            </Grid.RowDefinitions>
+
+
+                            <GroupBox Grid.Column="1" Grid.Row="1" Content="UI컴퍼넌트"/>
+                            <Grid Grid.Row="1" Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="12"/>
+                                    <RowDefinition Height="44*" />
+                                    <RowDefinition Height="5"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="5"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="5"/>
+
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="5"/>
+
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="5"/>
+
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="0"/>
+                                    <ColumnDefinition Width="0"/>
+                                    <ColumnDefinition Width="31"/>
+                                    <ColumnDefinition Width="49"/>
+                                    <ColumnDefinition Width="5"/>
+                                </Grid.ColumnDefinitions>
+                                <RadioButton Name="ButtonRadioButton" Checked="ButtonRadioButton_Checked"  Grid.Column="1" Grid.Row="1" Style="{DynamicResource IButton}" Grid.ColumnSpan="3" Margin="5,0,0,0"/>
+                                <RadioButton Name="TextBoxRadioButton" Checked="TextBoxRadioButton_Checked" Grid.Column="5" Grid.Row="1" Style="{DynamicResource ITextBox}" TabIndex="0" />
+                                <RadioButton Name="RadioButtonRadioButton" Checked="RadioButtonRadioButton_Checked" Grid.Column="7" Grid.Row="1" Style="{DynamicResource IRadioButton}"/>
+                                <RadioButton Name="ImageRadioButton" Checked="ImageRadioButton_Checked" Grid.Column="9" Grid.Row="1" Style="{DynamicResource IImage.png}"/>
+                                <Label Content="+" FontSize="15" Grid.Column="12" Grid.Row="1" Margin="0,18,0,17"/>
+                                <CheckBox Name="dotCheckBox" Checked="dotCheckBox_Checked" Unchecked="dotCheckBox_Unchecked" Grid.Column="13" Grid.Row="1" Style="{DynamicResource DotCheckBox}"/>
+                            </Grid>
+
+
+                        </Grid>
+                        <Grid Grid.Column="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3"/>
+                                <RowDefinition />
+                                <RowDefinition Height="5"/>
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="5"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="5"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="55"/>
+                                    <ColumnDefinition Width="5"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+
+                                <CheckBox x:Name="TieCheckBox" Checked="TieCheckBox_Checked" Grid.Column="2" Style="{DynamicResource TieCheckBox}"/>
+                                <CheckBox x:Name="SlurCheckBox" Checked="SlurCheckBox_Checked" Grid.Column="4" Style="{DynamicResource SlurCheckBox}"/>
+                                <CheckBox x:Name="DrawCheckBox" Grid.Column="6" Style="{DynamicResource DrawCheckBox}" Click="DrawCheckBox_Click" />
+                                <CheckBox x:Name="ModifyCheckBox" Content="CheckBox" Checked="ModifyModeCheckBox_Checked" Unchecked="ModifyModeCheckBox_Unchecked" Grid.Column="8" Style="{DynamicResource ModifyModeCheckBox}"/>
+                            </Grid>
+
+                            <Grid Grid.Row="3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0" />
+                                    <ColumnDefinition Width="0"/>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="90"/>
+                                    <ColumnDefinition Width="3"/>
+                                    <ColumnDefinition Width="45"/>
+                                    <ColumnDefinition Width="5"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Button Grid.Column="2" Height="24">
+                                    <!--<Image Source="" Margin="0,-1"/> -->
+                                    <Button.Background>
+                                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                            <GradientStop Color="White" Offset="0"/>
+                                            <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                                            <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                                            <GradientStop Color="White" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Button.Background>
+                                </Button>
+                                <Label Content="프로젝트" Grid.Column="3" Height="28" Margin="7,0,0,0"/>
+                                <ComboBox x:Name="TrackSelectComboBox" Grid.Column="4" Height="24" SelectionChanged="TrackSelectComboBox_SelectionChanged">
+                                    <ComboBox.Background>
+                                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                            <GradientStop Color="White" Offset="0"/>
+                                            <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                                            <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                                            <GradientStop Color="White" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </ComboBox.Background>
+                                    <ComboBoxItem Content="프로젝트 선택" IsSelected="True" />
+                                </ComboBox>
+                                <Button x:Name="TrackAddButton" Content="추가" Grid.Column="6" Height="24" >
+                                    <Button.Background>
+                                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                            <GradientStop Color="White" Offset="0"/>
+                                            <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                                            <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                                            <GradientStop Color="White" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+
+                    <GroupBox Grid.Column="5" Grid.Row="1" Content="디버그"/>
+                    <Grid Grid.Column="5" Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="95"/>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="28"/>
+                                <RowDefinition />
+                                <RowDefinition Height="15"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="5"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox Name="PlayCheckBox" Checked="Play" Unchecked="Pause" Grid.Column="1" Grid.Row="1" Style="{DynamicResource PlayCheckBox}"/>
+                            <Button Name="StopButton" Click="Stop" Grid.Column="3" Grid.Row="1" Style="{DynamicResource StopButton}"/>
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+                            <Expander x:Name="ChExpander"  ExpandDirection="Right" Header="디버그없이 실행" Height="100" Margin="0,30.52,0,0" >
+                                <TreeView x:Name="TrackTreeView" Width="105"/>
+                            </Expander>
+                        </Grid>
+                    </Grid>
+
+                    <GroupBox Grid.Column="7" Grid.Row="1" Content="저장"/>
+                    <Grid Grid.Column="7" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="28"/>
+                            <RowDefinition />
+                            <RowDefinition Height="15"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5"/>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="5"/>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="5"/>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="5"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button x:Name="HtmlFileSaveButton" Click="HtmlFileSaveButton_Click" Grid.Row="1" Grid.Column="1" >
+                            <Image Source="Image\midiSave.png"  />
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="MusicalScoreImageSave" Click="ScoreMusicSave_Click" Grid.Row="1" Grid.Column="3" >
+                            <Image Source="Image\DrawSave.png" Margin="-2,2" Stretch="Fill" />
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="MusicalScoreImagePrint" Click="ScoreDrawPrint" Grid.Row="1" Grid.Column="5" >
+                            <Image Source="Image\Print.png" Margin="-2,0" />
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+
+        </Menu>
+        <Grid Name="BottomGrid" DockPanel.Dock="Bottom">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Name="HTMLGridRowDefinition" Height="160"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="230"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" x:Name="UI" >
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Image/TrackMenu.png"/>
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Name="TrackInfoGrid" Grid.Column="1" Grid.Row="1">
+
+                    </Grid>
+                </Grid>
+                <ScrollViewer Grid.Column="1" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                    <Grid Name="DrawGrid" HorizontalAlignment="Left" Width="1040" VerticalAlignment="Stretch">
+
+                        <TextBox Grid.Column="1" Grid.Row="1" Height="84" HorizontalAlignment="Left" Name="TitleTextBox" VerticalAlignment="Top" Width="307" Visibility="Hidden" KeyDown="TitleTextBox_KeyDown" />
+                    </Grid>
+
+                </ScrollViewer>
+            </Grid>
+            <Grid x:Name="ViewGridParent" Grid.Row="1" Margin="40,0,0,0">
+                <Grid x:Name="ViewGrid"/>
+                <!-- <Image Source="Image\Piano.png" Stretch="Fill"/> -->
+            </Grid>
+
+        </Grid>
+
+
+    </DockPanel>
+
+</UserControl>

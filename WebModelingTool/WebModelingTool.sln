@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFDesigner", "WPFDesigner\WPFDesigner.csproj", "{BE536E05-1948-48AE-9C30-3305A58EB88F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebModelingTool", "WebModelingTool\WebModelingTool.csproj", "{898413D2-9AE7-4CBC-B12D-67A551B002B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE536E05-1948-48AE-9C30-3305A58EB88F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE536E05-1948-48AE-9C30-3305A58EB88F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE536E05-1948-48AE-9C30-3305A58EB88F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BE536E05-1948-48AE-9C30-3305A58EB88F}.Debug|x86.Build.0 = Debug|Any CPU
+		{BE536E05-1948-48AE-9C30-3305A58EB88F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE536E05-1948-48AE-9C30-3305A58EB88F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE536E05-1948-48AE-9C30-3305A58EB88F}.Release|x86.ActiveCfg = Release|Any CPU
+		{BE536E05-1948-48AE-9C30-3305A58EB88F}.Release|x86.Build.0 = Release|Any CPU
+		{898413D2-9AE7-4CBC-B12D-67A551B002B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{898413D2-9AE7-4CBC-B12D-67A551B002B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{898413D2-9AE7-4CBC-B12D-67A551B002B8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{898413D2-9AE7-4CBC-B12D-67A551B002B8}.Debug|x86.Build.0 = Debug|Any CPU
+		{898413D2-9AE7-4CBC-B12D-67A551B002B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{898413D2-9AE7-4CBC-B12D-67A551B002B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{898413D2-9AE7-4CBC-B12D-67A551B002B8}.Release|x86.ActiveCfg = Release|Any CPU
+		{898413D2-9AE7-4CBC-B12D-67A551B002B8}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0089703C-77E8-4A3B-8AA1-0402833F18DC}
+	EndGlobalSection
+EndGlobal

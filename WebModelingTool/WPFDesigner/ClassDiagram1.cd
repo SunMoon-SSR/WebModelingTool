@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WPFDesigner.App" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WPFDesigner.Designer" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAACCAAAIBAAAAAAAAAAAABAAIABAAAAA=</HashCode>
+      <FileName>Designer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WPFDesigner.DesignerComponent" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABAwgAAAAgBCEEAAAAgAAAAgCAAAEBCAAAAAEAEAAAA=</HashCode>
+      <FileName>DesignerComponent.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="1.787" Collapsed="true" />
+  </Class>
+  <Class Name="WPFDesigner.MultiVisibilityConverter" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MultiVisibilityConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WPFDesigner.MyButton" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFDesigner.MyStaticClass">
+    <Position X="10.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>MyStaticClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFDesigner.MyTextBox" Collapsed="true">
+    <Position X="2" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyTextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFDesigner.UIElement">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="WPFDesigner.UIElement.Font" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UIElement.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAIAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>UIElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFDesigner.UserControlList" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAgAMAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserControlList.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WPFDesigner.UserControlProperty" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAFAAAAAAAAAAQAAAAAIAAAACAAgAQAAAA=</HashCode>
+      <FileName>UserControlProperty.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WPFDesigner.VisibilityConverter" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VisibilityConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WPFDesigner.Properties.Resources">
+    <Position X="6.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFDesigner.Properties.Settings" Collapsed="true">
+    <Position X="11.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
