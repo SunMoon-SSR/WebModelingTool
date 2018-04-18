@@ -711,7 +711,6 @@
                                 </LinearGradientBrush>
                             </Button.Background>
                         </Button>
-
                     </Grid>
                 </Grid>
             </ScrollViewer>
