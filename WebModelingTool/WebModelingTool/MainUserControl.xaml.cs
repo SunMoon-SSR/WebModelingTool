@@ -33,8 +33,8 @@ namespace WebModelingTool
             Designer de = MyStaticClass.de;
             de.Width = 1000;
             de.Height = 800;
-            DrawGrid.Children.Add(de);
-            TrackInfoGrid.Children.Add(ul);
+            //DrawGrid.Children.Add(de);
+            //TrackInfoGrid.Children.Add(ul);
             this.LayoutUpdated += MainUserControl_LayoutUpdated;
 
         }
@@ -144,14 +144,14 @@ namespace WebModelingTool
                 Ratio = (double)((e.NewSize.Width) / e.PreviousSize.Width);
             }
 
-            HTMLGridRowDefinition.Height = new GridLength(HTMLGridRowDefinition.Height.Value * Ratio);
-            ViewGridParent.Margin = new Thickness(ViewGridParent.Margin.Left * Ratio, 0, 0, 0);
+            //HTMLGridRowDefinition.Height = new GridLength(HTMLGridRowDefinition.Height.Value * Ratio);
+            //ViewGridParent.Margin = new Thickness(ViewGridParent.Margin.Left * Ratio, 0, 0, 0);
 
-            if (e.PreviousSize.Width == 0)
-            {
-                HTMLGridRowDefinition.Height = new GridLength(160 * e.NewSize.Width / 1916);
-                ViewGridParent.Margin = new Thickness(HTMLGridRowDefinition.Height.Value, 0, 0, 0);
-            }
+            //if (e.PreviousSize.Width == 0)
+            //{
+            //    HTMLGridRowDefinition.Height = new GridLength(160 * e.NewSize.Width / 1916);
+            //    ViewGridParent.Margin = new Thickness(HTMLGridRowDefinition.Height.Value, 0, 0, 0);
+            //}
 
 
            // titleImg.Height = HTMLGridRowDefinition.Height.Value;
@@ -189,159 +189,6 @@ namespace WebModelingTool
         {
             TrackTreeView.Visibility = System.Windows.Visibility.Hidden;
         }
-        #region Image Save
-        private static RenderTargetBitmap bit;
-        BitmapSource source;
-        public void ScoreMusicSave_Click(object sender, RoutedEventArgs e)
-        {
-            bit = ConverterBitmapImage(DrawGrid);
-            Convert(DrawGrid);
-        }
-        private void Convert(Grid grid)
-        {
-            int size = 2100;
-            SaveFileDialog sf = new SaveFileDialog();
-            sf.Filter = "PNG|*.png";
-            sf.AddExtension = true;
-            bool? result = sf.ShowDialog();
-            if (result == true)
-            {
-                if ((grid.ActualHeight / size) < 1.5)
-                {
-                    source = CutAreaToImage(0, 0, grid.ActualWidth, size);
-                    ImageSave(null, sf, source);
-                }
-
-                else
-                {
-                    double a = Math.Ceiling(((double)grid.ActualHeight / size));
-                    if ((grid.ActualHeight - (a - 1) * size) <= 1700)
-                    {
-                        for (int i = 0; i < a - 1; i++)
-                        {
-                            source = CutAreaToImage(0, size * i, DrawGrid.ActualWidth, size);
-                            ImageSave(i, sf, source);
-                        }
-                    }
-
-                    else
-                    {
-                        for (int i = 0; i < a; i++)
-                        {
-                            source = CutAreaToImage(0, size * i, DrawGrid.ActualWidth, size);
-                            ImageSave(i, sf, source);
-                        }
-                    }
-                }
-                size = 2100;
-            }
-        }
-        private void ImageSave(int? number, Microsoft.Win32.SaveFileDialog saveDialog, BitmapSource source)
-        {
-            BitmapEncoder encoder = null;
-            string path = saveDialog.FileName;
-            char[] _path = path.ToCharArray(0, saveDialog.FileName.Length - 4);
-            string newpath = new string(_path);
-            if (number == null)
-            {
-                newpath = string.Format("{0}.png", newpath);
-            }
-            else
-            {
-                newpath = string.Format("{0}_{1}.png", newpath, number.ToString());
-            }
-            // 파일 생성
-            FileStream stream = new FileStream(newpath, FileMode.Create, FileAccess.Write);
-
-            // 파일 포맷
-            string upper = saveDialog.SafeFileName.ToUpper();
-            char[] format = upper.ToCharArray(saveDialog.SafeFileName.Length - 3, 3);
-            upper = new string(format);
-
-            encoder = new PngBitmapEncoder();
-            // 인코더 프레임에 이미지 추가
-            encoder.Frames.Add(BitmapFrame.Create(source));
-            // 파일에 저장
-            encoder.Save(stream);
-            stream.Close();
-            Process pr = new Process();
-            pr.StartInfo.FileName = newpath;
-            pr.Start();
-        }
-        private BitmapSource CutAreaToImage(int x, int y, double width, double height)
-        {
-            if (x < 0)
-            {
-                width += x;
-                x = 0;
-            }
-            if (y < 0)
-            {
-                height += y;
-                y = 0;
-
-                width = (int)DrawGrid.ActualWidth - x;
-            }
-            if (x + width > DrawGrid.ActualWidth)
-            {
-                width = (int)DrawGrid.ActualWidth - x;
-            }
-            if (y + height > (int)DrawGrid.ActualHeight)
-            {
-                height = (int)DrawGrid.ActualHeight - y;
-            }
-
-            byte[] pixels = CopyPixels((int)x, (int)y, (int)width, (int)height);
-
-            int stride = ((int)width * bit.Format.BitsPerPixel + 7) / 8;
-
-            return BitmapSource.Create((int)width, (int)height, 96, 96, PixelFormats.Pbgra32, null, pixels, stride);
-        }
-
-        private byte[] CopyPixels(int x, int y, int width, int height)
-        {
-            byte[] pixels = new byte[width * height * 4];
-            int stride = (width * bit.Format.BitsPerPixel + 7) / 8;
-
-            // Canvas 이미지에서 객체 역역만큼 픽셀로 복사
-            bit.CopyPixels(new Int32Rect(x, y, (int)width, (int)height), pixels, stride, 0);
-
-            return pixels;
-        }
-
-        private RenderTargetBitmap ConverterBitmapImage(Grid grid)
-        {
-
-            DrawingVisual dv = new DrawingVisual();
-            DrawingContext dc = dv.RenderOpen();
-
-
-            //Size size = new Size(grid.ActualWidth, grid.ActualHeight);
-            Size size = new Size(grid.ActualWidth, DrawGrid.ActualHeight);
-            dc.DrawRectangle(new VisualBrush(grid), null, new Rect(new Point(0, 0), size));
-            dc.Close();
-            //RenderTargetBitmap target = new RenderTargetBitmap((int)grid.ActualWidth, (int)smu.ScoreGrid.ActualHeight, 96, 96, PixelFormats.Pbgra32);
-            RenderTargetBitmap target = new RenderTargetBitmap((int)grid.ActualWidth, (int)DrawGrid.ActualHeight, 96, 96, PixelFormats.Pbgra32);
-            target.Render(dv);
-            return target;
-        }
-        #endregion
-
-        public void ScoreDrawPrint(object sender, RoutedEventArgs e)
-        {
-            PrintDialog dlg = new PrintDialog();
-            dlg.PageRangeSelection = PageRangeSelection.AllPages;
-            dlg.UserPageRangeEnabled = true;
-
-            Nullable<bool> result = dlg.ShowDialog();
-
-            if (result == true)
-            {
-                dlg.PrintVisual(DrawGrid, "HtmlView Print");
-            }
-        }
-
-
         private void ButtonRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             dotCheckBox.IsEnabled = true;

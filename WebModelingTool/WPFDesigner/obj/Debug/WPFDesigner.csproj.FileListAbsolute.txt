@@ -22,3 +22,5 @@ C:\Users\jja14\Source\Repos\WebModelingTool\WebModelingTool\WPFDesigner\obj\Debu
 C:\Users\jja14\Source\Repos\WebModelingTool\WebModelingTool\WPFDesigner\obj\Debug\WPFDesigner.csproj.CoreCompileInputs.cache
 C:\Users\jja14\Source\Repos\WebModelingTool\WebModelingTool\WPFDesigner\obj\Debug\WPFDesigner.dll
 C:\Users\jja14\Source\Repos\WebModelingTool\WebModelingTool\WPFDesigner\obj\Debug\WPFDesigner.pdb
+C:\Users\jja14\Source\Repos\WebModelingTool\WebModelingTool\WPFDesigner\obj\Debug\UserControlUIDefinition.g.cs
+C:\Users\jja14\Source\Repos\WebModelingTool\WebModelingTool\WPFDesigner\obj\Debug\UserControlUIDefinition.baml
