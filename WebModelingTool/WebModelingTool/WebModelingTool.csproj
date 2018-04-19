@@ -106,7 +106,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Resource Include="Image\Background.png" />
     <Resource Include="Image\dot.png" />
     <Resource Include="Image\DrawIcon.png" />
     <Resource Include="Image\DrawOff.png" />

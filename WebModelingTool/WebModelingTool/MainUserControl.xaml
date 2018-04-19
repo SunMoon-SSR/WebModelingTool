@@ -711,6 +711,7 @@
                                 </LinearGradientBrush>
                             </Button.Background>
                         </Button>
+
                     </Grid>
                 </Grid>
             </ScrollViewer>
@@ -719,7 +720,7 @@
         <Grid Name="BottomGrid" DockPanel.Dock="Bottom">
             <Grid.RowDefinitions>
                 <RowDefinition/>
-                <RowDefinition Name="HTMLGridRowDefinition" Height="160"/>
+                <RowDefinition Name="HTMLGridRowDefinition" Height="300"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
@@ -754,7 +755,12 @@
                 </ScrollViewer>
             </Grid>
             <Grid x:Name="ViewGridParent" Grid.Row="1" Margin="40,0,0,0">
-                <Grid x:Name="ViewGrid"/>
+                <ScrollViewer Grid.Column="1" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                    <WebBrowser x:Name="WebBrowser">
+ 
+                    </WebBrowser>
+
+                </ScrollViewer>
                 <!-- <Image Source="Image\Piano.png" Stretch="Fill"/> -->
             </Grid>
 

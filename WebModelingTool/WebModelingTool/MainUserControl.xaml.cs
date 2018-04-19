@@ -35,9 +35,24 @@ namespace WebModelingTool
             de.Height = 800;
             DrawGrid.Children.Add(de);
             TrackInfoGrid.Children.Add(ul);
-
+            this.LayoutUpdated += MainUserControl_LayoutUpdated;
 
         }
+
+        private void MainUserControl_LayoutUpdated(object sender, EventArgs e)
+        {
+            if (MyStaticClass.IsMainGridClik==false&& dotCheckBox.IsChecked==false)
+            {
+                ButtonRadioButton.IsChecked = false;
+                TextBoxRadioButton.IsChecked = false;
+                RadioButtonRadioButton.IsChecked = false;
+            }
+            else if(dotCheckBox.IsChecked == false)
+            {
+
+            }
+        }
+
         void myDoc_selectTrackEvent(int trackNum)
         {
             try
@@ -333,12 +348,13 @@ namespace WebModelingTool
             if (dotCheckBox.IsChecked == true)
             {
                 Designer.IsUIChecked[0] = true;
+                
             }
             else
             {
                 Designer.IsUIChecked[0] = true;
             }
-
+            
         }
 
         private void TextBoxRadioButton_Checked(object sender, RoutedEventArgs e)

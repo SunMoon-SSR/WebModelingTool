@@ -102,10 +102,9 @@ namespace WPFDesigner
 
         private void OuterBorder_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            MyStaticClass.IsMainGridClik = true;
             Point pt = e.GetPosition(this);
-
             pt.Y = pt.Y;
-
             if (MyStaticClass.ul.NewButton.IsSelected ||IsUIChecked[0]==true)
             {
                 MyButton my = new MyButton("버튼", "이태릭체", "없음", 10);
@@ -145,7 +144,6 @@ namespace WPFDesigner
                 r.Fill.Opacity = 0.8;
                 this.Add(r, my, pt);
                 MyStaticClass.ul.NewButton.IsSelected = false;
-                IsUIChecked[0] = false;
             }
 
             else if ((MyStaticClass.ul.NewCheckBox.IsSelected) || IsUIChecked[1] == true)
@@ -179,8 +177,12 @@ namespace WPFDesigner
                 r.Fill.Opacity = 0.8;
                 this.Add(r, my, pt);
                 MyStaticClass.ul.NewCheckBox.IsSelected = false;
-                 IsUIChecked[1] =false;
+              
+               
             }
+            for (int i = 0; i < IsUIChecked.Length; i++)
+                IsUIChecked[i] = false;
+            MyStaticClass.IsMainGridClik = false;
         }
     }
 }
