@@ -26,7 +26,7 @@ namespace WebModelingTool
     {
         public delegate void ChangeStatusTextEvent(string text);
         public delegate void NewProjectEvent(string type);
-
+        private WebBrowser webview;
         private bool IsButtonCheck = false;
         private bool IsTextBoxCheck = false;
         private bool IsRadioButtonCheck = false;
@@ -40,6 +40,12 @@ namespace WebModelingTool
             //DrawGrid.Children.Add(de);
             //TrackInfoGrid.Children.Add(ul);
             this.LayoutUpdated += MainUserControl_LayoutUpdated;
+            UserControlUIDefinition ucud =new UserControlUIDefinition();
+            UIDefinitionGrid.Children.Add(ucud);
+             webview=ucud.GetWebViewer();
+           
+            webview.NavigateToString("<HTML><H2><B>hello HtmlModeling Tool Html</B><P></P></H2><H2><B>It's WebBrowser</B><P></P></H2>");
+
 
         }
         #region UIRedefinition
@@ -282,7 +288,9 @@ namespace WebModelingTool
 
         private void ImageOpenButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            HtmlConverter htm = new HtmlConverter();
+            htm.Close();
+            webview.NavigateToString(MyStaticClass.TestWebBrowserData);
         }
 
         private void HtmlOpenButton_Click(object sender, RoutedEventArgs e)

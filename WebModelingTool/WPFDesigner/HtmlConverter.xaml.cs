@@ -26,29 +26,54 @@ namespace WPFDesigner
         {
             InitializeComponent();
             frameworkElements = Designer.frameworkElements;
-            HTMLnote.Text += "<html>\n  <head>\n </head>\n  <body>\n";
-            if(frameworkElements!=null)
-            foreach (DesignerComponent de in frameworkElements)
-            {
-                if (de.MyUI is MyButton)
-                {
-                    MyButton be = de.MyUI as MyButton;
-                    HTMLnote.Text += " <button type=" + '\u0022' + "button" + '\u0022' + ">\n   ";
-                    HTMLnote.Text += "   " + be.UIName;
-                    HTMLnote.Text += "  \n</button>\n";
+            //HTMLnote.Text += "<html>\n  <head>\n </head>\n  <body>\n";
+            //if (frameworkElements != null)
+            //    foreach (DesignerComponent de in frameworkElements)
+            //    {
+            //        if (de.MyUI is MyButton)
+            //        {
+            //            MyButton be = de.MyUI as MyButton;
+            //            HTMLnote.Text += " <button type=" + '\u0022' + "button" + '\u0022' + ">\n   ";
+            //            HTMLnote.Text += "   " + be.UIName;
+            //            HTMLnote.Text += "  \n</button>\n";
 
-                }
-                else if(de.MyUI is MyTextBox)
+            //        }
+            //        else if (de.MyUI is MyTextBox)
+            //        {
+            //            MyTextBox be = de.MyUI as MyTextBox;
+            //            HTMLnote.Text += " <textbox type=" + '\u0022' + "textbox" + '\u0022' + ">\n   ";
+            //            HTMLnote.Text += "   " + be.UIName;
+
+            //            HTMLnote.Text += "  \n</textbox>\n";
+            //        }
+            //    }
+            //HTMLnote.Text += "  </body>\n</html>";
+            HTMLnote.Text += "<html><head></head><body>";
+            if (frameworkElements != null)
+                foreach (DesignerComponent de in frameworkElements)
+                {
+                    if (de.MyUI is MyButton)
+                    {
+                        MyButton be = de.MyUI as MyButton;
+                        HTMLnote.Text += "<button type="+'\u0022' + "button"+'\u0022'+ "size=" + '\u0022' + de.Width + '\u0022' +
+                            "name=" + '\u0022' + be.UIName + '\u0022'
+                            + "style=" + '\u0022' + "height:" + de.Height + "px" + '\u0022'+">";
+                        HTMLnote.Text += "" + be.UIName;
+                        HTMLnote.Text += "</button>";
+
+                    }
+                    else if (de.MyUI is MyTextBox)
                     {
                         MyTextBox be = de.MyUI as MyTextBox;
-                        HTMLnote.Text += " <textbox type=" + '\u0022' + "textbox" + '\u0022' + ">\n   ";
-                        HTMLnote.Text += "   " + be.UIName;
-                        
-                        HTMLnote.Text += "  \n</textbox>\n";
+                        HTMLnote.Text += "<input style=" + '\u0022' +"ime - mode:auto"+ '\u0022'+
+                            "size=" +'\u0022'+ de.Width+'\u0022'+
+                            "name="+'\u0022'+be.UIName+ '\u0022'
+                            +"style="+'\u0022'+"height:"+ de.Height+"px"+'\u0022';
+                        HTMLnote.Text += "</input>";
                     }
-            }
-            else            HTMLnote.Text += "     </body>\n</html>";
-
+                }
+            HTMLnote.Text += "</body></html>";
+            MyStaticClass.TestWebBrowserData = HTMLnote.Text;
         }
         
     }

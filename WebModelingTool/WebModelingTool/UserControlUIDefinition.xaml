@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
            
-             xmlns:WPFDesigner="clr-namespace:WPFDesigner;assembly=WPFDesigner" x:Class="WebModelingTool.UserControlUIDefinition"
+             xmlns:WPFDesigner="clr-namespace:WPFDesigner;assembly=WPFDesigner" xmlns:local="clr-namespace:WebModelingTool" x:Class="WebModelingTool.UserControlUIDefinition"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="1500">
     <Grid>
@@ -13,10 +13,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
-        <Grid x:Name="UIPropertyGrid" Grid.Column="2" Background="AntiqueWhite">
-         
-
-        </Grid>
+        <Grid x:Name="UIPropertyGrid" Grid.Column="2" Background="AntiqueWhite"/>
         <GridSplitter Grid.Column="2" HorizontalAlignment="Left" Width="4" Background="#BFDBFF" />
         <TreeView x:Name="_samplesTreeView" Grid.Column="0" BorderThickness="0" Margin="0 0 4 0"/>
         <GridSplitter Grid.Row="0" HorizontalAlignment="Right" Width="4" Background="#BFDBFF" />
@@ -41,10 +38,8 @@
                 <WebBrowser x:Name="_webBrowser" Grid.Column="1" Visibility="Collapsed"/>
             </Grid>
             <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" Height="4" Background="#BFDBFF" />
-            <RichTextBox x:Name="_htmlEditor" Grid.Row="2" VerticalScrollBarVisibility="Visible" BorderThickness="0" 
-                          />
+            <WebBrowser x:Name="htmlViewer" Grid.Row="2" />
         </Grid>
-       
-
-        </Grid>
+        <local:UserControlUIDefinition Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="928,454,0,-254" VerticalAlignment="Top" Width="100"/>
+    </Grid>
 </UserControl>

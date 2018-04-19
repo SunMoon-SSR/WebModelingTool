@@ -107,7 +107,7 @@ namespace WPFDesigner
             pt.Y = pt.Y;
             if (MyStaticClass.ul.NewButton.IsSelected ||IsUIChecked[0]==true)
             {
-                MyButton my = new MyButton("버튼", "이태릭체", "없음", 10);
+                MyButton my = new MyButton("Button", "이태릭체", "없음", 10);
                 Rectangle r = new Rectangle();
                 Button mq = new Button();
                 r.RadiusX = 0;
@@ -134,7 +134,7 @@ namespace WPFDesigner
 
                 // Create some text.
                 TextBlock someText = new TextBlock();
-                someText.Text = "버튼";
+                someText.Text = "Button";
                 FontSizeConverter fSizeConverter = new FontSizeConverter();
                 someText.FontSize = (double)fSizeConverter.ConvertFromString("10pt");
                 someText.Margin = new Thickness(10);
@@ -148,7 +148,7 @@ namespace WPFDesigner
 
             else if ((MyStaticClass.ul.NewCheckBox.IsSelected) || IsUIChecked[1] == true)
             {
-                MyTextBox my = new MyTextBox("텍스트박스", "이태릭체", "없음", 10);
+                MyTextBox my = new MyTextBox("TextBox", "이태릭체", "없음", 10);
                 Rectangle r = new Rectangle();
                 r.RadiusX = 0;
                 r.RadiusY = 0;

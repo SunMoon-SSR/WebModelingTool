@@ -14,7 +14,8 @@ namespace WPFDesigner
 
         public static bool IsMainGridClik = false;
         public static bool IsDotCheck = false;
-        
+
+        public static string TestWebBrowserData;
     }
   
    public enum MYUI

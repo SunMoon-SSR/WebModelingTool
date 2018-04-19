@@ -718,7 +718,10 @@
             </ScrollViewer>
 
         </Menu>
-        <local:UserControlUIDefinition />
+        <Grid x:Name="UIDefinitionGrid">
+            
+        </Grid>
+      
 
 
 
