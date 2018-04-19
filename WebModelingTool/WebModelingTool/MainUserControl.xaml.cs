@@ -47,9 +47,12 @@ namespace WebModelingTool
                 TextBoxRadioButton.IsChecked = false;
                 RadioButtonRadioButton.IsChecked = false;
             }
-            else if(dotCheckBox.IsChecked == false)
+            else if(dotCheckBox.IsChecked==true)
             {
+                if (ButtonRadioButton.IsChecked==true)
+                {
 
+                }
             }
         }
 
