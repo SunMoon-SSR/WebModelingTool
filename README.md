@@ -9,4 +9,10 @@
 
 * Compile the source code by using C# based environment such as Visual Studio (We recommand Visual Studio 2017)
 * Run the compiled program image
+
+# Current progress
+* Button and text box creation and HTML conversion function
+* Size adjustment function of each UI
+
+
 ![Alt text](/web.PNG)
