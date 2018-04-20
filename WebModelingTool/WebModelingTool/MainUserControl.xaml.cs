@@ -26,6 +26,10 @@ namespace WebModelingTool
     {
         public delegate void ChangeStatusTextEvent(string text);
         public delegate void NewProjectEvent(string type);
+
+        private bool IsButtonCheck = false;
+        private bool IsTextBoxCheck = false;
+        private bool IsRadioButtonCheck = false;
         public MainUserControl()
         {
             InitializeComponent();
@@ -38,23 +42,27 @@ namespace WebModelingTool
             this.LayoutUpdated += MainUserControl_LayoutUpdated;
 
         }
-
+        #region UIRedefinition
         private void MainUserControl_LayoutUpdated(object sender, EventArgs e)
         {
             if (MyStaticClass.IsMainGridClik==false&& dotCheckBox.IsChecked==false)
             {
                 ButtonRadioButton.IsChecked = false;
+                IsButtonCheck = false;
                 TextBoxRadioButton.IsChecked = false;
+                IsTextBoxCheck = false;
                 RadioButtonRadioButton.IsChecked = false;
+                IsRadioButtonCheck = false;
             }
             else if(dotCheckBox.IsChecked==true)
             {
-                if (ButtonRadioButton.IsChecked==true)
-                {
-
-                }
+                if (IsButtonCheck)
+                    Designer.IsUIChecked[0] = true;
+                else if(IsTextBoxCheck)
+                    Designer.IsUIChecked[1] = true;
             }
         }
+        #endregion
 
         void myDoc_selectTrackEvent(int trackNum)
         {
@@ -197,14 +205,11 @@ namespace WebModelingTool
             dotCheckBox.IsEnabled = true;
             if (dotCheckBox.IsChecked == true)
             {
-                Designer.IsUIChecked[0] = true;
+                IsButtonCheck = true;
                 
             }
-            else
-            {
-                Designer.IsUIChecked[0] = true;
-            }
-            
+            Designer.IsUIChecked[0] = true;
+
         }
 
         private void TextBoxRadioButton_Checked(object sender, RoutedEventArgs e)
@@ -212,12 +217,10 @@ namespace WebModelingTool
             dotCheckBox.IsEnabled = true;
             if (dotCheckBox.IsChecked == true)
             {
-                Designer.IsUIChecked[1] = true;
+                IsTextBoxCheck = true;
             }
-            else
-            {
-                Designer.IsUIChecked[1] = true;
-            }
+
+            Designer.IsUIChecked[1] = true;
         }
 
         private void RadioButtonRadioButton_Checked(object sender, RoutedEventArgs e)
@@ -227,10 +230,7 @@ namespace WebModelingTool
             {
                 
             }
-            else
-            {
-               
-            }
+
         }
 
         private void ImageRadioButton_Checked(object sender, RoutedEventArgs e)
