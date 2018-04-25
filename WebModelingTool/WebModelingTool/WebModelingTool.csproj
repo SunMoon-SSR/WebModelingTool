@@ -103,6 +103,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,8 +118,6 @@
   <ItemGroup>
     <Resource Include="Image\dot.png" />
     <Resource Include="Image\DrawIcon.png" />
-    <Resource Include="Image\DrawOff.png" />
-    <Resource Include="Image\DrawOn.png" />
     <Resource Include="Image\DrawSave.png" />
     <Resource Include="Image\Harmony.png" />
     <Resource Include="Image\ImageButton1.png" />

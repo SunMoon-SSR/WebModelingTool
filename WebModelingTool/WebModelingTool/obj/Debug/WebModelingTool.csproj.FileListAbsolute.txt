@@ -20,4 +20,3 @@ C:\Users\jja14\Source\Repos\WebModelingTool\WebModelingTool\WebModelingTool\bin\
 C:\Users\jja14\Source\Repos\WebModelingTool\WebModelingTool\WebModelingTool\bin\Debug\WPFDesigner.pdb
 C:\Users\jja14\Source\Repos\WebModelingTool\WebModelingTool\WebModelingTool\obj\Debug\UserControlUIDefinition.g.cs
 C:\Users\jja14\Source\Repos\WebModelingTool\WebModelingTool\WebModelingTool\obj\Debug\UserControlUIDefinition.baml
-C:\Users\jja14\Source\Repos\WebModelingTool\WebModelingTool\WebModelingTool\obj\Debug\GeneratedInternalTypeHelper.g.cs

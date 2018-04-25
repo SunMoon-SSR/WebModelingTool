@@ -180,7 +180,9 @@
                                 </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
                             <Image x:Name="image" Margin="0" Source="Image\DrawOff.png" Stretch="Uniform" Visibility="Hidden"/>
-                            <Image x:Name="image1" Margin="0" Source="Image\DrawOn.png" Stretch="Uniform" Height="Auto" Width="Auto"/>
+                            <!--="Image\DrawOff.png"-->
+                            <Image x:Name="image1" Margin="0"  Stretch="Uniform" Height="Auto" Width="Auto"/>
+                            <!--="Image\DrawOn.png"-->
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
@@ -526,15 +528,15 @@
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="5"/>
-                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="0"/>
                                     <ColumnDefinition Width="5"/>
-                                    <ColumnDefinition Width="30"/>
-                                    <ColumnDefinition Width="5"/>
-
                                     <ColumnDefinition Width="50"/>
                                     <ColumnDefinition Width="5"/>
 
-                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="5"/>
+
+                                    <ColumnDefinition Width="50"/>
                                     <ColumnDefinition Width="5"/>
 
                                     <ColumnDefinition Width="50"/>

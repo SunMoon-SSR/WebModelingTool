@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <Grid x:Name="UIPropertyGrid" Grid.Column="2" Background="AntiqueWhite"/>
         <GridSplitter Grid.Column="2" HorizontalAlignment="Left" Width="4" Background="#BFDBFF" />
-        <TreeView x:Name="_samplesTreeView" Grid.Column="0" BorderThickness="0" Margin="0 0 4 0"/>
+        <RichTextBox x:Name="HtmlCodeRichTextBox" Grid.Column="0" BorderThickness="0" Margin="0 0 4 0"/>
         <GridSplitter Grid.Row="0" HorizontalAlignment="Right" Width="4" Background="#BFDBFF" />
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>

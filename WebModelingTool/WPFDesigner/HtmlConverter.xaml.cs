@@ -48,7 +48,7 @@ namespace WPFDesigner
             //        }
             //    }
             //HTMLnote.Text += "  </body>\n</html>";
-            HTMLnote.Text += "<html><head></head><body>";
+            HTMLnote.Text += "<html>\n<head>\n</head>\n<body>\n";
             if (frameworkElements != null)
                 foreach (DesignerComponent de in frameworkElements)
                 {
@@ -57,9 +57,9 @@ namespace WPFDesigner
                         MyButton be = de.MyUI as MyButton;
                         HTMLnote.Text += "<button type="+'\u0022' + "button"+'\u0022'+ "size=" + '\u0022' + de.Width + '\u0022' +
                             "name=" + '\u0022' + be.UIName + '\u0022'
-                            + "style=" + '\u0022' + "height:" + de.Height + "px" + '\u0022'+">";
+                            + "style=" + '\u0022' + "height:" + de.Height + "px" + '\u0022'+ ">\n";
                         HTMLnote.Text += "" + be.UIName;
-                        HTMLnote.Text += "</button>";
+                        HTMLnote.Text += "\n</button>\n";
 
                     }
                     else if (de.MyUI is MyTextBox)
@@ -69,10 +69,10 @@ namespace WPFDesigner
                             "size=" +'\u0022'+ de.Width+'\u0022'+
                             "name="+'\u0022'+be.UIName+ '\u0022'
                             +"style="+'\u0022'+"height:"+ de.Height+"px"+'\u0022';
-                        HTMLnote.Text += "</input>";
+                        HTMLnote.Text += "</input>\n";
                     }
                 }
-            HTMLnote.Text += "</body></html>";
+            HTMLnote.Text += "</body>\n</html>\n";
             MyStaticClass.TestWebBrowserData = HTMLnote.Text;
         }
         

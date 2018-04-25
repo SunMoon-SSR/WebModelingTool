@@ -32,5 +32,9 @@ namespace WebModelingTool
         {
             return this.htmlViewer;
         }
+        public RichTextBox GetHtmlViewer()
+        {
+            return this.HtmlCodeRichTextBox;
+        }
     }
 }
