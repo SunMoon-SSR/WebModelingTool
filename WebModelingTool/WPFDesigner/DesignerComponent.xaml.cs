@@ -144,28 +144,28 @@ namespace WPFDesigner
         // 유아이 속성창 보여주기
         private void UIPropertyDataSetting()
         {
-            MyStaticClass.ucp.UI_NameSetting = this.MyUI.UIName; 
-            MyStaticClass.ucp.UIHeigthSetting = this.Height;
-            MyStaticClass.ucp.UIWidthSetting = this.Width;
-            MyStaticClass.ucp.UI_HorizonSetting = UIHorizontal;
-            MyStaticClass.ucp.UI_VerticalSetting = UIVertical;
+            WebModelingStaticClass.ucp.UI_NameSetting = this.MyUI.UIName; 
+            WebModelingStaticClass.ucp.UIHeigthSetting = this.Height;
+            WebModelingStaticClass.ucp.UIWidthSetting = this.Width;
+            WebModelingStaticClass.ucp.UI_HorizonSetting = UIHorizontal;
+            WebModelingStaticClass.ucp.UI_VerticalSetting = UIVertical;
 
             //UI 형변환
-            if ((MyUI is MyButton))
+            if ((MyUI is UI_Button))
             {
 
-                MyButton but = this.MyUI as MyButton;
-                MyStaticClass.ucp.UIKindSetting = "버튼";
-                MyStaticClass.ucp.LB_Option1.Text = but.UIName;
-                MyStaticClass.ucp.UI_Option1.Text = but.UIName;
-                MyStaticClass.ucp.UI_Option1.Visibility = Visibility.Visible;
+                UI_Button but = this.MyUI as UI_Button;
+                WebModelingStaticClass.ucp.UIKindSetting = "버튼";
+                WebModelingStaticClass.ucp.LB_Option1.Text = but.UIName;
+                WebModelingStaticClass.ucp.UI_Option1.Text = but.UIName;
+                WebModelingStaticClass.ucp.UI_Option1.Visibility = Visibility.Visible;
 
             }
-            else if ((MyUI is MyTextBox))
+            else if ((MyUI is UI_TextBox))
             {
 
-                MyTextBox but = this.MyUI as MyTextBox;
-                MyStaticClass.ucp.UIKindSetting = "텍스트박스";
+                UI_TextBox but = this.MyUI as UI_TextBox;
+                WebModelingStaticClass.ucp.UIKindSetting = "텍스트박스";
             }
         }
 

@@ -30,7 +30,7 @@ namespace WPFDesigner
         {
             
             InitializeComponent();
-            //MyStaticClass.DesignElement = frameworkElements;
+            //WebModelingStaticClass.DesignElement = frameworkElements;
         }
 
         public void Add(FrameworkElement item, UIElement UI, Point point)
@@ -61,15 +61,15 @@ namespace WPFDesigner
 
         public void ClearUIProPerty()
         {
-            MyStaticClass.ucp.UIKindSetting = "컨트롤";
-            MyStaticClass.ucp.UI_NameSetting = string.Empty;
-            MyStaticClass.ucp.UIWidth.Text = string.Empty;
-            MyStaticClass.ucp.UIHeigth.Text = string.Empty;
-            MyStaticClass.ucp.UI_Horizon.Text = string.Empty;
-            MyStaticClass.ucp.UI_Vertical.Text = string.Empty;
-            MyStaticClass.ucp.LB_Option1.Text = string.Empty;
-            MyStaticClass.ucp.UI_Option1.Text = string.Empty;
-            MyStaticClass.ucp.UI_Option1.Visibility = Visibility.Hidden;
+            WebModelingStaticClass.ucp.UIKindSetting = "컨트롤";
+            WebModelingStaticClass.ucp.UI_NameSetting = string.Empty;
+            WebModelingStaticClass.ucp.UIWidth.Text = string.Empty;
+            WebModelingStaticClass.ucp.UIHeigth.Text = string.Empty;
+            WebModelingStaticClass.ucp.UI_Horizon.Text = string.Empty;
+            WebModelingStaticClass.ucp.UI_Vertical.Text = string.Empty;
+            WebModelingStaticClass.ucp.LB_Option1.Text = string.Empty;
+            WebModelingStaticClass.ucp.UI_Option1.Text = string.Empty;
+            WebModelingStaticClass.ucp.UI_Option1.Visibility = Visibility.Hidden;
 
             
            
@@ -102,12 +102,12 @@ namespace WPFDesigner
 
         private void OuterBorder_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            MyStaticClass.IsMainGridClik = true;
+            WebModelingStaticClass.IsMainGridClik = true;
             Point pt = e.GetPosition(this);
             pt.Y = pt.Y;
-            if (MyStaticClass.ul.NewButton.IsSelected ||IsUIChecked[0]==true)
+            if (WebModelingStaticClass.ul.NewButton.IsSelected ||IsUIChecked[0]==true)
             {
-                MyButton my = new MyButton("Button", "이태릭체", "없음", 10);
+                UI_Button my = new UI_Button("Button", "이태릭체", "없음", 10);
                 Rectangle r = new Rectangle();
                 Button mq = new Button();
                 r.RadiusX = 0;
@@ -143,12 +143,12 @@ namespace WPFDesigner
                 r.Fill = myBrush;
                 r.Fill.Opacity = 0.8;
                 this.Add(r, my, pt);
-                MyStaticClass.ul.NewButton.IsSelected = false;
+                WebModelingStaticClass.ul.NewButton.IsSelected = false;
             }
 
-            else if ((MyStaticClass.ul.NewCheckBox.IsSelected) || IsUIChecked[1] == true)
+            else if ((WebModelingStaticClass.ul.NewCheckBox.IsSelected) || IsUIChecked[1] == true)
             {
-                MyTextBox my = new MyTextBox("TextBox", "이태릭체", "없음", 10);
+                UI_TextBox my = new UI_TextBox("TextBox", "이태릭체", "없음", 10);
                 Rectangle r = new Rectangle();
                 r.RadiusX = 0;
                 r.RadiusY = 0;
@@ -176,13 +176,13 @@ namespace WPFDesigner
                 r.Fill = myBrush;
                 r.Fill.Opacity = 0.8;
                 this.Add(r, my, pt);
-                MyStaticClass.ul.NewCheckBox.IsSelected = false;
+                WebModelingStaticClass.ul.NewCheckBox.IsSelected = false;
               
                
             }
             for (int i = 0; i < IsUIChecked.Length; i++)
                 IsUIChecked[i] = false;
-            MyStaticClass.IsMainGridClik = false;
+            WebModelingStaticClass.IsMainGridClik = false;
         }
     }
 }

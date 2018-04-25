@@ -17,7 +17,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="WPFDesigner.DesignerComponent" BaseTypeListCollapsed="true">
-    <Position X="4.25" Y="3.25" Width="2.25" />
+    <Position X="4.25" Y="2.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>ABAwhAAAAgBCEEAAIAgAAAAgCAAAEBCAAAAAEAEAAAA=</HashCode>
       <FileName>DesignerComponent.xaml.cs</FileName>
@@ -32,25 +32,25 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="WPFDesigner.MyButton" Collapsed="true">
-    <Position X="1.5" Y="1.75" Width="1.5" />
+  <Class Name="WPFDesigner.UI_Button" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MyButton.cs</FileName>
+      <FileName>UI_Button.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WPFDesigner.MyStaticClass">
-    <Position X="10.25" Y="4.75" Width="1.5" />
+  <Class Name="WPFDesigner.WebModelingStaticClass">
+    <Position X="8.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAgAEAAAAAAAAAAAAAAAgAACQ=</HashCode>
-      <FileName>MyStaticClass.cs</FileName>
+      <FileName>WebModelingStaticClass.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WPFDesigner.MyTextBox" Collapsed="true">
+  <Class Name="WPFDesigner.UI_TextBox" Collapsed="true">
     <Position X="2.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MyTextBox.cs</FileName>
+      <FileName>UI_TextBox.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WPFDesigner.UIElement">
@@ -97,14 +97,14 @@
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="WPFDesigner.Properties.Settings" Collapsed="true">
-    <Position X="11.5" Y="7.25" Width="1.5" />
+  <Class Name="WPFDesigner.Properties.Settings">
+    <Position X="12.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="WPFDesigner.HtmlConverter" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="0.5" Y="6" Width="1.5" />
+  <Class Name="WPFDesigner.HtmlConverter" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAgAAAAACAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>HtmlConverter.xaml.cs</FileName>
@@ -119,11 +119,11 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Enum Name="WPFDesigner.MYUI" Collapsed="true">
-    <Position X="3.25" Y="1.75" Width="1.5" />
+  <Enum Name="WPFDesigner.MYUI">
+    <Position X="10.25" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MyStaticClass.cs</FileName>
+      <FileName>WebModelingStaticClass.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="맑은 고딕" Size="9" />

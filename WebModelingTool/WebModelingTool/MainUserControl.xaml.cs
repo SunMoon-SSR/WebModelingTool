@@ -34,8 +34,8 @@ namespace WebModelingTool
         public MainUserControl()
         {
             InitializeComponent();
-           UserControlProperty  ul = MyStaticClass.ucp;
-            Designer de = MyStaticClass.de;
+           UserControlProperty  ul = WebModelingStaticClass.ucp;
+            Designer de = WebModelingStaticClass.de;
             de.Width = 1000;
             de.Height = 800;
             //DrawGrid.Children.Add(de);
@@ -53,7 +53,7 @@ namespace WebModelingTool
         #region UIRedefinition
         private void MainUserControl_LayoutUpdated(object sender, EventArgs e)
         {
-            if (MyStaticClass.IsMainGridClik==false&& dotCheckBox.IsChecked==false)
+            if (WebModelingStaticClass.IsMainGridClik==false&& dotCheckBox.IsChecked==false)
             {
                 ButtonRadioButton.IsChecked = false;
                 IsButtonCheck = false;
@@ -293,8 +293,8 @@ namespace WebModelingTool
             HtmlCordRich.AppendText("");
             HtmlConverter htm = new HtmlConverter();
             htm.Close();
-            webview.NavigateToString(MyStaticClass.TestWebBrowserData);
-            HtmlCordRich.AppendText(MyStaticClass.TestWebBrowserData);
+            webview.NavigateToString(WebModelingStaticClass.TestWebBrowserData);
+            HtmlCordRich.AppendText(WebModelingStaticClass.TestWebBrowserData);
         }
 
         private void HtmlOpenButton_Click(object sender, RoutedEventArgs e)

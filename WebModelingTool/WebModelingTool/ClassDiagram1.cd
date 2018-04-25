@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="WebModelingTool.App">
-    <Position X="1.75" Y="4.5" Width="1.5" />
+    <Position X="1.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>App.xaml.cs</FileName>
@@ -28,7 +28,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="WebModelingTool.MainWindow" BaseTypeListCollapsed="true">
-    <Position X="4.75" Y="4.5" Width="1.5" />
+    <Position X="4.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
@@ -36,7 +36,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="WebModelingTool.UserControlUIDefinition" BaseTypeListCollapsed="true">
-    <Position X="1.75" Y="2.75" Width="1.5" />
+    <Position X="1.25" Y="2.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAgAAAAAA=</HashCode>
       <FileName>UserControlUIDefinition.xaml.cs</FileName>
@@ -44,13 +44,13 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="WebModelingTool.Properties.Resources">
-    <Position X="3.25" Y="2.75" Width="1.5" />
+    <Position X="3.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="WebModelingTool.Properties.Settings">
-    <Position X="4.75" Y="2.75" Width="1.5" />
+    <Position X="4.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>

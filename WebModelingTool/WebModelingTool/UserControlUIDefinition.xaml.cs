@@ -24,7 +24,7 @@ namespace WebModelingTool
         {
             InitializeComponent();
             
-            UIPropertyGrid.Children.Add(MyStaticClass.ucp);
+            UIPropertyGrid.Children.Add(WebModelingStaticClass.ucp);
          //   htmlViewer.NavigateToString("<HTML><H2><B>asd Html</B><P></P></H2><H2><B>hhhhhh</B><P></P></H2>");
    
         }

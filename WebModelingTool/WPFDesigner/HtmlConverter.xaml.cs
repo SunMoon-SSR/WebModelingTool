@@ -30,17 +30,17 @@ namespace WPFDesigner
             //if (frameworkElements != null)
             //    foreach (DesignerComponent de in frameworkElements)
             //    {
-            //        if (de.MyUI is MyButton)
+            //        if (de.MyUI is UI_Button)
             //        {
-            //            MyButton be = de.MyUI as MyButton;
+            //            UI_Button be = de.MyUI as UI_Button;
             //            HTMLnote.Text += " <button type=" + '\u0022' + "button" + '\u0022' + ">\n   ";
             //            HTMLnote.Text += "   " + be.UIName;
             //            HTMLnote.Text += "  \n</button>\n";
 
             //        }
-            //        else if (de.MyUI is MyTextBox)
+            //        else if (de.MyUI is UI_TextBox)
             //        {
-            //            MyTextBox be = de.MyUI as MyTextBox;
+            //            UI_TextBox be = de.MyUI as UI_TextBox;
             //            HTMLnote.Text += " <textbox type=" + '\u0022' + "textbox" + '\u0022' + ">\n   ";
             //            HTMLnote.Text += "   " + be.UIName;
 
@@ -52,9 +52,9 @@ namespace WPFDesigner
             if (frameworkElements != null)
                 foreach (DesignerComponent de in frameworkElements)
                 {
-                    if (de.MyUI is MyButton)
+                    if (de.MyUI is UI_Button)
                     {
-                        MyButton be = de.MyUI as MyButton;
+                        UI_Button be = de.MyUI as UI_Button;
                         HTMLnote.Text += "<button type="+'\u0022' + "button"+'\u0022'+ "size=" + '\u0022' + de.Width + '\u0022' +
                             "name=" + '\u0022' + be.UIName + '\u0022'
                             + "style=" + '\u0022' + "height:" + de.Height + "px" + '\u0022'+ ">\n";
@@ -62,9 +62,9 @@ namespace WPFDesigner
                         HTMLnote.Text += "\n</button>\n";
 
                     }
-                    else if (de.MyUI is MyTextBox)
+                    else if (de.MyUI is UI_TextBox)
                     {
-                        MyTextBox be = de.MyUI as MyTextBox;
+                        UI_TextBox be = de.MyUI as UI_TextBox;
                         HTMLnote.Text += "<input style=" + '\u0022' +"ime - mode:auto"+ '\u0022'+
                             "size=" +'\u0022'+ de.Width+'\u0022'+
                             "name="+'\u0022'+be.UIName+ '\u0022'
@@ -73,7 +73,7 @@ namespace WPFDesigner
                     }
                 }
             HTMLnote.Text += "</body>\n</html>\n";
-            MyStaticClass.TestWebBrowserData = HTMLnote.Text;
+            WebModelingStaticClass.TestWebBrowserData = HTMLnote.Text;
         }
         
     }

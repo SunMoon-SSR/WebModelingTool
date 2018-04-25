@@ -113,8 +113,8 @@
       <DependentUpon>DesignerComponent.xaml</DependentUpon>
     </Compile>
     <Compile Include="MultiVisibilityConverter.cs" />
-    <Compile Include="MyStaticClass.cs" />
-    <Compile Include="MyTextBox.cs" />
+    <Compile Include="WebModelingStaticClass.cs" />
+    <Compile Include="UI_TextBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
