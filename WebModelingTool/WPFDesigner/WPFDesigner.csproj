@@ -105,7 +105,7 @@
     <Compile Include="HtmlConverter.xaml.cs">
       <DependentUpon>HtmlConverter.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyButton.cs" />
+    <Compile Include="UI_Button.cs" />
     <Compile Include="Designer.xaml.cs">
       <DependentUpon>Designer.xaml</DependentUpon>
     </Compile>
@@ -113,6 +113,10 @@
       <DependentUpon>DesignerComponent.xaml</DependentUpon>
     </Compile>
     <Compile Include="MultiVisibilityConverter.cs" />
+    <Compile Include="UI_EventArgs.cs" />
+    <Compile Include="UI_CheckBox.cs" />
+    <Compile Include="UI_JPG.cs" />
+    <Compile Include="UI_RadioButton.cs" />
     <Compile Include="WebModelingStaticClass.cs" />
     <Compile Include="UI_TextBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

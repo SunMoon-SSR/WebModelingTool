@@ -18,9 +18,5 @@ namespace WPFDesigner
         public static string TestWebBrowserData;
     }
   
-   public enum MYUI
-    {
-        
-    }
 
 }
