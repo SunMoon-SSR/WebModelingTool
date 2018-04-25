@@ -40,6 +40,6 @@
             <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" Height="4" Background="#BFDBFF" />
             <WebBrowser x:Name="htmlViewer" Grid.Row="2" />
         </Grid>
-        <local:UserControlUIDefinition Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="928,454,0,-254" VerticalAlignment="Top" Width="100"/>
+      
     </Grid>
 </UserControl>
