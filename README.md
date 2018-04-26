@@ -16,4 +16,4 @@
 * Size adjustment function of each UI
 
 
-![Alt text](/web.PNG)
+![Alt text](/Web.PNG)
